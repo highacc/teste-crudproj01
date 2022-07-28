@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+  }
+
+.conta__container {
+    max-width: 80%; 
+    margin-top: 20px;
+    padding-inline: 20px; 
+    
+    
+}

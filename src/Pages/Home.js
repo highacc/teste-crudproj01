@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react'
-import './Home.css'
+import {Link} from "react-router-dom";
+import './Home.css';
 
 
 function Home() {
@@ -27,11 +28,11 @@ function Home() {
     <div className="container">
 
             
-    <table className="table ">
+    <table className="table">
       <thead>
         <tr className="table-header ">
           <th scope="col">#</th>
-          <th scope="col">Nome</th>
+          <th scope="col">Descrição</th>
           <th scope="col">Valor</th>
           <th scope="col">Vencimento</th>
           <th scope="col">Ação</th>
@@ -39,17 +40,17 @@ function Home() {
       </thead>
       <tbody className="table-group-divider">
 
-      {users.map((user, index) => (
+      {users.map((conta, index) => (
      
         <tr key={index}>
           <th scope="row" className=" text-lg py-3">{index + 1}</th>
-          <td className=" text-lg  py-3">{user.nome}</td>
-          <td className=" text-lg  py-3">R${user.valor}</td>
-          <td className=" text-lg  py-3">{user.vencimento}</td>
+          <td className=" text-lg  py-3">{conta.nome}</td>
+          <td className=" text-lg  py-3">R${conta.valor}</td>
+          <td className=" text-lg  py-3">{conta.vencimento}</td>
           <td className=" buttons-column flex justify-center items-center space-x-4 mt-1">
-            <button className= " px-6 py-2 text-white font-bold bg-black rounded-lg">
+            <Link to={`/todos/${conta.id}`} className= " px-6 py-2 text-white font-bold bg-black rounded-lg">
               View
-            </button>
+            </Link>
             <button className= " px-6 py-2 text-white font-bold bg-blue-600 rounded-lg">
               Edit
             </button>
