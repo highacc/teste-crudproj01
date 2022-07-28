@@ -24,19 +24,19 @@ function Contas() {
 
   
   return (
-    <div className= 'conta__container align-self-center'>
+    <div className= 'conta__container'>
       
       {conta && (
         <>
-        <h1>Cadastrar Conta</h1>
+        <h1>Conta</h1>
         <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">Descrição</span>
-  <input type="text" className="form-control" placeholder="Ex.Padaria" aria-label="Ex.Padaria" aria-describedby="basic-addon1"/>
+  <input type="text" className="form-control" placeholder={conta.nome} aria-label="Ex.Padaria" aria-describedby="basic-addon1"></input>
 </div>
 
 <div className="input-group mb-3">
 <span className="input-group-text" id="basic-addon2">Item</span>
-  <input type="text" className="form-control" placeholder="Ex.Pão" aria-label="Ex.Pão" aria-describedby="basic-addon2"/>
+  <input type="text" className="form-control" placeholder={conta.item} aria-label="Ex.Pão" aria-describedby="basic-addon2"></input>
  
 </div>
 
@@ -44,20 +44,20 @@ function Contas() {
 <div className="input-group mb-3">
   <span className="input-group-text">Valor</span>
   <span className="input-group-text">R$</span>
-  <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)"/>
+  <input type="text" placeholder={conta.valor} className="form-control" aria-label="Amount (to the nearest dollar)"></input>
   
 </div>
 
 <div className="input-group mb-3">
   <span className="input-group-text">Vencimento</span>
-  <input type="date" className="form-control" placeholder="Vencimento" aria-label="Vencimento"/>
+  <input type="text" className="form-control" placeholder={conta.vencimento} aria-label="Vencimento"></input>
   <span className="input-group-text">Pagamento</span>
-  <input type="date" className="form-control" placeholder="Pagamento" aria-label="Pagamento"/>
+  <input type="text" className="form-control" placeholder={conta.pagamento} aria-label="Pagamento"></input>
 </div>
 
 <div className="input-group">
   <span className="input-group-text">Comentário</span>
-  <textarea className="form-control" aria-label="With textarea"></textarea>
+  <textarea className="form-control" placeholder={conta.comentario} aria-label="With textarea"></textarea>
 </div>
 
         </>

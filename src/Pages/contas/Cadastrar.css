@@ -1,10 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-   
-  }
-
-.conta__container {
+.cadastrar__container {
     width: 500px;
     height: 500px;
     max-width: 80%; 
@@ -16,6 +10,4 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    
-    
 }
