@@ -44,7 +44,7 @@ function Home() {
      
         <tr key={index}>
           <th scope="row" className=" text-lg py-3">{index + 1}</th>
-          <td className=" text-lg  py-3">{conta.nome}</td>
+          <td className=" text-lg  py-3">{conta.descricao}</td>
           <td className=" text-lg  py-3">R${conta.valor}</td>
           <td className=" text-lg  py-3">{conta.vencimento}</td>
           <td className=" buttons-column flex justify-center items-center space-x-4 mt-1">

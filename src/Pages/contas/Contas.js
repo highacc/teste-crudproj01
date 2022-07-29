@@ -31,7 +31,7 @@ function Contas() {
         <h1>Conta</h1>
         <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">Descrição</span>
-  <input type="text" className="form-control" placeholder={conta.nome} aria-label="Ex.Padaria" aria-describedby="basic-addon1"></input>
+  <input type="text" className="form-control" placeholder={conta.descricao} aria-label="Ex.Padaria" aria-describedby="basic-addon1"></input>
 </div>
 
 <div className="input-group mb-3">

@@ -11,3 +11,10 @@
     align-items: center;
     align-content: center;
 }
+
+.btn__cadastrar {
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+
+}
