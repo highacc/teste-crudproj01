@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useNavigate} from 'react';
 import {Link} from "react-router-dom";
 import './Home.css';
 
@@ -8,19 +8,28 @@ function Home() {
 
   const baseUrl = ("https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos");
 
+  
+
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-
+  const loadContas = () => {
     axios.get(baseUrl)
     .then((response) =>{
-        setUsers(response.data);
+        setUsers(response.data.reverse());
         
 
     });
+  };
 
-
+  useEffect(() => {
+    loadContas();
   }, []);
+
+
+  function Delete(id){
+    axios.delete(`${baseUrl}/${id}`)
+    .then(loadContas());
+  }
 
 
 
@@ -51,10 +60,10 @@ function Home() {
             <Link to={`/todos/${conta.id}`} className= " px-6 py-2 text-white font-bold bg-black rounded-lg">
               View
             </Link>
-            <button className= " px-6 py-2 text-white font-bold bg-blue-600 rounded-lg">
+            <Link to={`/edit-conta/${conta.id}`} className= " px-6 py-2 text-white font-bold bg-blue-600 rounded-lg">
               Edit
-            </button>
-            <button className= " px-6 py-2 text-white font-bold bg-red-600 rounded-lg"> 
+            </Link>
+            <button onClick = {()=>Delete(conta.id)}className= " px-6 py-2 text-white font-bold bg-red-600 rounded-lg"> 
               Delete
             </button>
           </td>
