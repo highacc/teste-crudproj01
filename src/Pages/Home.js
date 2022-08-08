@@ -23,7 +23,7 @@ function Home() {
 
   useEffect(() => {
     loadContas();
-  }, []);
+  }, [users]);
 
 
   function Delete(id){

@@ -1,14 +1,14 @@
 import React from "react";
-import { useEffect, useState, useParams } from "react";
+import { useEffect, useState  } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Edit.css";
 
 function Edit() {
 
-  const {idEdit} = useParams();
+   const {id} = useParams(); 
 
-  const baseUrl = (`https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos/${idEdit}`);
+  const baseUrl = (`https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos/${id}`);
 
   const [descricao, setDescricao] = useState("");
   const [item, setItem] = useState("");
@@ -17,18 +17,37 @@ function Edit() {
   const [pagamento, setPagamento] = useState("");
   const [comentario, setComentario] = useState("");
 
- /*  const navigate = useNavigate(); */
+  const navigate = useNavigate(); 
 
   
   useEffect(() => {
 
-    axios.get(baseUrl)
+    axios.get(baseUrl) 
     .then((response) =>{
         setDescricao(response.data.descricao);
+        setItem(response.data.item);
+        setValor(response.data.valor);
+        setVencimento(response.data.vencimento);
+        setPagamento(response.data.pagamento);
+        setComentario(response.data.comentario);
         
-
     });
 }, []);
+
+const data = {
+  descricao: descricao,
+  item: item,
+  valor: valor,
+  vencimento: vencimento,
+  pagamento: pagamento,
+  comentario: comentario
+};
+
+function Update (e){
+  e.preventDefault();
+  axios.put(baseUrl, data)
+  .then(navigate("/")) ;
+}
 
   return (
 
@@ -111,7 +130,7 @@ function Edit() {
       </div>
       <div class="d-grid gap-2 col-6 mx-auto">
         <button
-          /* onClick={Submit} */
+          onClick={Update}  
           className="btn text-black btn-outline-success me-2 btn__edit"
           type="button"
         >

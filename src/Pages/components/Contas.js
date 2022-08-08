@@ -2,7 +2,7 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useParams} from 'react-router-dom';
-import '../contas/Contas.css';
+import './Contas.css';
 
 function Contas() {
   const {id} = useParams()

@@ -2,9 +2,9 @@ import './App.css';
 import Navbar from './Pages/Navbar';
 import Home from './Pages/Home';
 import {Routes, Route} from "react-router-dom";
-import Contas from "./Pages/contas/Contas";
-import Cadastrar from "./Pages/contas/Cadastrar";
-import Edit from './Pages/contas/Edit';
+import Contas from "./Pages/components/Contas";
+import Cadastrar from "./Pages/components/Cadastrar";
+import Edit from './Pages/components/Edit';
 
 function App() {
   return (
