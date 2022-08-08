@@ -128,7 +128,7 @@ function Update (e){
           aria-label="With textarea"
         ></textarea>
       </div>
-      <div class="d-grid gap-2 col-6 mx-auto">
+      <div className="d-grid gap-2 col-6 mx-auto">
         <button
           onClick={Update}  
           className="btn text-black btn-outline-success me-2 btn__edit"

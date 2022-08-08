@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Pages/Navbar';
 import Home from './Pages/Home';
+import Footer from './Pages/Footer';
 import {Routes, Route} from "react-router-dom";
 import Contas from "./Pages/components/Contas";
 import Cadastrar from "./Pages/components/Cadastrar";
@@ -20,6 +21,7 @@ function App() {
 
 
       </Routes>
+      <Footer/>
     </div>
   );
 }
