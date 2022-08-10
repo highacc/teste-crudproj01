@@ -1,10 +1,11 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Cadastrar.css";
+import Modal from './modal/Modal';
 
-function Cadastrar() {
+function Cadastrar( closeModal) {
 
   const baseUrl = (`https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos`);
 
@@ -14,6 +15,8 @@ function Cadastrar() {
   const [vencimento, setVencimento] = useState("");
   const [pagamento, setPagamento] = useState("");
   const [comentario, setComentario] = useState("");
+
+  const [contaModal, setContaModal] = useState(false);
 
   const navigate = useNavigate();
 
@@ -34,6 +37,7 @@ function Cadastrar() {
   }
 
   return (
+    <Modal closeModal={closeModal}>
     <div className="cadastrar__container">
       <h2>Cadastro de Conta</h2>
 
@@ -121,6 +125,7 @@ function Cadastrar() {
         </button>
       </div>
     </div>
+    </Modal>
   );
 }
 

@@ -3,8 +3,9 @@ import { useEffect, useState  } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Edit.css";
+import Modal from './modal/Modal';
 
-function Edit() {
+function Edit( closeModal) {
 
    const {id} = useParams(); 
 
@@ -50,7 +51,7 @@ function Update (e){
 }
 
   return (
-
+    <Modal closeModal={closeModal}>
     <div className="edit__container">
       <h2>Editar Conta</h2>
 
@@ -138,7 +139,7 @@ function Update (e){
         </button>
       </div>
     </div>
-    
+    </Modal>
   )
 };
 
