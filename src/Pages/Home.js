@@ -6,17 +6,17 @@ import "./Home.css";
 function Home() {
   const baseUrl = "https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos";
 
-  const [users, setUsers] = useState([]);
+  const [contas, setContas] = useState([]);
 
   const loadContas = () => {
     axios.get(baseUrl).then((response) => {
-      setUsers(response.data.reverse());
+      setContas(response.data.reverse());
     });
   };
 
   useEffect(() => {
     loadContas();
-  }, [users]);
+  }, [contas]);
 
   function Delete(id) {
     axios.delete(`${baseUrl}/${id}`).then(loadContas());
@@ -38,7 +38,7 @@ function Home() {
           </tr>
         </thead>
         <tbody className="table-group-divider">
-          {users.map((conta, index) => (
+          {contas.map((conta, index) => (
             <tr key={index}>
               <th scope="row" className=" text-lg py-3">
                 {index + 1}
