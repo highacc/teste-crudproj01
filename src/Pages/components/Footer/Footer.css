@@ -3,7 +3,8 @@
     text-decoration: none;
 }
 
-a{
+.footer-link, .copyright-link{
     color: white;
     text-decoration: none;
+    text-decoration-color: white;
 }

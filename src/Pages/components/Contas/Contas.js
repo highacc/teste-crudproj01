@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import './Contas.css';
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 
 function Contas( closeModal) {
   const {id} = useParams()

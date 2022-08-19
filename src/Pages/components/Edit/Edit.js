@@ -3,7 +3,7 @@ import { useEffect, useState  } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Edit.css";
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 
 function Edit( closeModal) {
 

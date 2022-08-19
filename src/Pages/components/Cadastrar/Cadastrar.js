@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Cadastrar.css";
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 
 function Cadastrar( closeModal) {
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState, useNavigate } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
@@ -25,6 +25,7 @@ function Home() {
   return (
     <>
     <h1 className="title">Contas a Pagar</h1>
+    
     <div className="container">
       
       <table className="table">
