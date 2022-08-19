@@ -7,7 +7,7 @@ function Footer() {
     <div className="container">
 
       <p className="copyright">
-        &copy; 2022 <a href="https://highacc.github.io/MD03-Proj03-portfolio/" className="copyright-link">Olavo de ssouto</a>. All Rightss Resseverd
+        &copy; 2022 <a href="https://highacc.github.io/MD03-Proj03-portfolio/" className="copyright-link"> Olavo de Souto. </a> All Rightss Resseverd
       </p>
 
       <ul className="footer-lisst">
