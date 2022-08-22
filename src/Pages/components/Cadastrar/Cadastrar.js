@@ -41,6 +41,20 @@ function Cadastrar( closeModal) {
     <div className="cadastrar__container">
       <h2>Cadastro de Conta</h2>
 
+      <div className="form-check">
+        
+        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+        <span className="input-group " id="basic-addon1">
+          Receita
+        </span>
+        
+      </div>
+      <div className="form-check">
+        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+        <span className="input-group" id="basic-addon1">
+          Despesa
+        </span>
+      </div>
       <div className="input-group mb-3">
         <span className="input-group-text" id="basic-addon1">
           Descrição

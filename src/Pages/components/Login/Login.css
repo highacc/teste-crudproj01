@@ -1,0 +1,21 @@
+.cadastrar__container {
+    width: 500px;
+    height: 250px;
+    max-width: 100%; 
+    max-height: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 20px; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.btn__cadastrar {
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+
+}

@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Resumo from "./components/Resumo/Resumo";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function Home() {
   const baseUrl = "https://olavo-todolistc15md04-jsonserv.herokuapp.com/todos";
@@ -24,7 +27,10 @@ function Home() {
 
   return (
     <>
-    <h1 className="title">Contas a Pagar</h1>
+    <Navbar/>
+    <h1 className="title">Controle Financeiro</h1>
+    
+    <Resumo/>
     
     <div className="container">
       
@@ -111,6 +117,7 @@ function Home() {
         </tbody>
       </table>
     </div>
+    <Footer/>
     </>
   );
 }
